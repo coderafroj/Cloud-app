@@ -1,0 +1,21 @@
+[build-system]
+requires = ["briefcase"]
+build-backend = "briefcase.build"
+
+[tool.briefcase]
+project_name = "CloudApp"
+bundle = "com.bytecore.cloudapp"
+version = "0.1.0"
+url = "https://bytecore.in"
+license.file = "LICENSE"
+author = "Afroj"
+author_email = "coderafroj@example.com"
+
+[tool.briefcase.app.cloudapp]
+formal_name = "CloudApp"
+description = "A Python-based Android app built by Afroj."
+sources = ["cloudapp"]
+requires = ["python"]
+
+[tool.briefcase.app.cloudapp.android]
+requires = []

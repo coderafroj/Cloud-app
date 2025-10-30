@@ -1,0 +1,285 @@
+Date/Time:       2025-10-30 15:22:48 
+Command line:    /data/data/com.termux/files/usr/bin/briefcase build android
+
+OS Release:      Linux 5.4.254-android12-9-g3efa8ef58500
+OS Version:      #1 SMP PREEMPT Tue Mar 11 09:39:34 CST 2025
+Architecture:    aarch64
+Platform:        Linux-5.4.254-android12-9-g3efa8ef58500-aarch64-with-libc
+
+Python exe:      /data/data/com.termux/files/usr/bin/python3.12
+Python version:  3.12.12 (main, Oct 18 2025, 05:45:20) [Clang 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4
+Virtual env:     False
+Conda env:       False
+
+Briefcase:       0.3.25
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ANDROID_ART_ROOT=/apex/com.android.art
+	ANDROID_ASSETS=/system/app
+	ANDROID_DATA=/data
+	ANDROID_I18N_ROOT=/apex/com.android.i18n
+	ANDROID_ROOT=/system
+	ANDROID_STORAGE=/storage
+	ANDROID_TZDATA_ROOT=/apex/com.android.tzdata
+	ANDROID__BUILD_VERSION_SDK=31
+	ASEC_MOUNTPOINT=/mnt/asec
+	BOOTCLASSPATH=/apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/apex/com.android.i18n/javalib/core-icu4j.jar:/system/framework/radio_interactor_common.jar:/system/framework/unisoc_ims_common.jar:/system/framework/unisoc-framework.jar:/apex/com.android.appsearch/javalib/framework-appsearch.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar:/apex/com.android.media/javalib/updatable-media.jar:/apex/com.android.mediaprovider/javalib/framework-mediaprovider.jar:/apex/com.android.mediaprovider/javalib/framework-pdf.jar:/apex/com.android.mediaprovider/javalib/framework-photopicker.jar:/apex/com.android.os.statsd/javalib/framework-statsd.jar:/apex/com.android.permission/javalib/framework-permission.jar:/apex/com.android.permission/javalib/framework-permission-s.jar:/apex/com.android.scheduling/javalib/framework-scheduling.jar:/apex/com.android.sdkext/javalib/framework-sdkextensions.jar:/apex/com.android.tethering/javalib/framework-connectivity.jar:/apex/com.android.tethering/javalib/framework-tethering.jar:/apex/com.android.wifi/javalib/framework-wifi.jar
+	CFLAGS=-I/data/data/com.termux/files/usr/include
+	COLORTERM=truecolor
+	DEX2OATBOOTCLASSPATH=/apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/framework-graphics.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/apex/com.android.i18n/javalib/core-icu4j.jar:/system/framework/radio_interactor_common.jar:/system/framework/unisoc_ims_common.jar:/system/framework/unisoc-framework.jar
+	EXTERNAL_STORAGE=/storage/self/primary
+	HISTCONTROL=ignoreboth
+	HOME=/data/data/com.termux/files/home
+	LANG=en_US.UTF-8
+	LDFLAGS=-L/data/data/com.termux/files/usr/lib
+	LD_PRELOAD=/data/data/com.termux/files/usr/lib/libtermux-exec-ld-preload.so
+	OLDPWD=/data/data/com.termux/files/home/Cloud-app/cloudapp
+	PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin
+	PREFIX=/data/data/com.termux/files/usr
+	PWD=/data/data/com.termux/files/home/Cloud-app
+	SHELL=/data/data/com.termux/files/usr/bin/bash
+	SHELL_CMD__APP_TERMINAL_SESSION_NUMBER_SINCE_APP_START=1
+	SHELL_CMD__APP_TERMINAL_SESSION_NUMBER_SINCE_BOOT=26
+	SHELL_CMD__PACKAGE_NAME=com.termux
+	SHELL_CMD__RUNNER_NAME=terminal-session
+	SHELL_CMD__SHELL_ID=1
+	SHLVL=1
+	SYSTEMSERVERCLASSPATH=/system/framework/com.android.location.provider.jar:/system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/unisoc-services.jar:/apex/com.android.appsearch/javalib/service-appsearch.jar:/apex/com.android.art/javalib/service-art.jar:/apex/com.android.media/javalib/service-media-s.jar:/apex/com.android.permission/javalib/service-permission.jar
+	TERM=xterm-256color
+	TERMUX_APP__APK_FILE=/data/app/~~BCAN_gCwRN4Z9NngJw68qg==/com.termux-SK6XvBChxVdHooGD_eHuNA==/base.apk
+	TERMUX_APP__APK_RELEASE=F_DROID
+	TERMUX_APP__APP_VERSION_CODE=1022
+	TERMUX_APP__APP_VERSION_NAME=0.119.0-beta.3
+	TERMUX_APP__DATA_DIR=/data/user/0/com.termux
+	TERMUX_APP__IS_DEBUGGABLE_BUILD=false
+	TERMUX_APP__IS_INSTALLED_ON_EXTERNAL_STORAGE=false
+	TERMUX_APP__LEGACY_DATA_DIR=/data/data/com.termux
+	TERMUX_APP__PACKAGE_NAME=com.termux
+	TERMUX_APP__PID=22185
+	TERMUX_APP__SE_FILE_CONTEXT=u:object_r:app_data_file:s0:c209,c256,c512,c768
+	TERMUX_APP__SE_INFO=default:targetSdkVersion=28:complete
+	TERMUX_APP__TARGET_SDK=28
+	TERMUX_VERSION=0.119.0-beta.3
+	TERMUX__APPS_DIR=/data/user/0/com.termux/termux/apps
+	TERMUX__HOME=/data/data/com.termux/files/home
+	TERMUX__PREFIX=/data/data/com.termux/files/usr
+	TERMUX__ROOTFS_DIR=/data/data/com.termux/files
+	TERMUX__SE_PROCESS_CONTEXT=u:r:untrusted_app_27:s0:c209,c256,c512,c768
+	TERMUX__UID=10209
+	TERMUX__USER_ID=0
+	TMPDIR=/data/data/com.termux/files/usr/tmp
+	_=/data/data/com.termux/files/usr/bin/briefcase
+
+pyproject.toml:
+[build-system]
+requires = ["briefcase"]
+build-backend = "briefcase.build"
+
+[tool.briefcase]
+project_name = "CloudApp"
+bundle = "com.bytecore.cloudapp"
+version = "0.1.0"
+url = "https://bytecore.in"
+license.file = "LICENSE"
+author = "Afroj"
+author_email = "coderafroj@example.com"
+
+[tool.briefcase.app.cloudapp]
+formal_name = "CloudApp"
+description = "A Python-based Android app built by Afroj."
+sources = ["cloudapp"]
+requires = ["python"]
+
+[tool.briefcase.app.cloudapp.android]
+requires = []
+
+Briefcase Log:
+[15:22:47] Using JDK at /data/data/com.termux/files/home/.cache/briefcase/tools/java17                                                                                   java.py:259
+                                                                                                                                                                  android_sdk.py:361
+           [android_sdk] The Android SDK was not found; downloading and installing...                                                                             android_sdk.py:361
+           To use an existing Android SDK instance, specify its root directory path in the ANDROID_HOME environment variable.                                     android_sdk.py:365
+                                                                                                                                                                  android_sdk.py:369
+                                                                                                                                                                      __main__.py:42
+           Briefcase cannot install Android SDK on this machine.                                                                                                      __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           Install Android SDK manually and specify the installation directory in the ANDROID_HOME environment variable.                                              __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           Saving log... started                                                                                                                                      console.py:438
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/android_sdk.py:86 in cmdline_tools_url                                                       │
+│                                                                                                                                                                                  │
+│     83 │   │   that are unsupported by sdkmanager, users can set up their own SDK install.                                                                                       │
+│     84 │   │   """                                                                                                                                                               │
+│     85 │   │   try:                                                                                                                                                              │
+│ ❱   86 │   │   │   platform_name = {                                                                                                                                             │
+│     87 │   │   │   │   "Darwin": {                                                                                                                                               │
+│     88 │   │   │   │   │   "arm64": "mac",                                                                                                                                       │
+│     89 │   │   │   │   │   "x86_64": "mac",                                                                                                                                      │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────── locals ────────────────────────────────────╮                                                                                                │
+│ │ self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x6ec1e18f80> │                                                                                                │
+│ ╰───────────────────────────────────────────────────────────────────────────────╯                                                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+KeyError: 'aarch64'
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/__main__.py:27 in main                                                                                    │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ────────────────────────────────────────────╮                                                                               │
+│ │       command = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x6ec1c3db80> │                                                                               │
+│ │       console = <briefcase.console.Console object at 0x6ec86aca10>                             │                                                                               │
+│ │             e = IncompatibleToolError()                                                        │                                                                               │
+│ │ extra_cmdline = []                                                                             │                                                                               │
+│ │       options = {                                                                              │                                                                               │
+│ │                 │   'update': False,                                                           │                                                                               │
+│ │                 │   'update_requirements': False,                                              │                                                                               │
+│ │                 │   'update_support': False,                                                   │                                                                               │
+│ │                 │   'update_stub': False,                                                      │                                                                               │
+│ │                 │   'update_resources': False,                                                 │                                                                               │
+│ │                 │   'no_update': False,                                                        │                                                                               │
+│ │                 │   'test_mode': False                                                         │                                                                               │
+│ │                 }                                                                              │                                                                               │
+│ │     overrides = {}                                                                             │                                                                               │
+│ │        result = 200                                                                            │                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                               │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/commands/build.py:138 in __call__                                                                         │
+│                                                                                                                                                                                  │
+│   135 │   │                                                                                                                                                                      │
+│   136 │   │   # Confirm host compatibility, that all required tools are available,                                                                                               │
+│   137 │   │   # and that the app configuration is finalized.                                                                                                                     │
+│ ❱ 138 │   │   self.finalize(app, test_mode)                                                                                                                                      │
+│   139 │   │                                                                                                                                                                      │
+│   140 │   │   if app_name:                                                                                                                                                       │
+│   141 │   │   │   try:                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────── locals ───────────────────────────────────────────────╮                                                                         │
+│ │                 app = None                                                                           │                                                                         │
+│ │            app_name = None                                                                           │                                                                         │
+│ │           no_update = False                                                                          │                                                                         │
+│ │             options = {}                                                                             │                                                                         │
+│ │                self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x6ec1c3db80> │                                                                         │
+│ │           test_mode = False                                                                          │                                                                         │
+│ │              update = False                                                                          │                                                                         │
+│ │ update_requirements = False                                                                          │                                                                         │
+│ │    update_resources = False                                                                          │                                                                         │
+│ │         update_stub = False                                                                          │                                                                         │
+│ │      update_support = False                                                                          │                                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                         │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/commands/base.py:701 in finalize                                                                          │
+│                                                                                                                                                                                  │
+│    698 │   │   │   to finalize. By default, all apps will be finalized.                                                                                                          │
+│    699 │   │   """                                                                                                                                                               │
+│    700 │   │   self.verify_host()                                                                                                                                                │
+│ ❱  701 │   │   self.verify_tools()                                                                                                                                               │
+│    702 │   │                                                                                                                                                                     │
+│    703 │   │   apps = self.apps.values() if app is None else [app]                                                                                                               │
+│    704 │   │   for app in apps:                                                                                                                                                  │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ──────────────────────────────────────────╮                                                                                   │
+│ │       app = None                                                                           │                                                                                   │
+│ │      self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x6ec1c3db80> │                                                                                   │
+│ │ test_mode = False                                                                          │                                                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                   │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/platforms/android/gradle.py:147 in verify_tools                                                           │
+│                                                                                                                                                                                  │
+│   144 │   │   """Verify that the Android APK tools in `briefcase` will operate on this system,                                                                                   │
+│   145 │   │   downloading tools as needed."""                                                                                                                                    │
+│   146 │   │   super().verify_tools()                                                                                                                                             │
+│ ❱ 147 │   │   AndroidSDK.verify(tools=self.tools)                                                                                                                                │
+│   148 │   │   if not self.is_clone:                                                                                                                                              │
+│   149 │   │   │   self.console.add_log_file_extra(self.tools.android_sdk.list_packages)                                                                                          │
+│   150                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────── locals ────────────────────────────────────────╮                                                                                        │
+│ │ self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x6ec1c3db80> │                                                                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────╯                                                                                        │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/base.py:114 in verify                                                                        │
+│                                                                                                                                                                                  │
+│   111 │   │   **kwargs,                                                                        ╭───────────────────────────────── locals ─────────────────────────────────╮      │
+│   112 │   ) -> ManagedToolT:                                                                   │     app = None                                                           │      │
+│   113 │   │   """Confirm the managed tool is installed and available."""                       │ install = True                                                           │      │
+│ ❱ 114 │   │   return super().verify(tools=tools, app=app, install=install, **kwargs)           │  kwargs = {}                                                             │      │
+│   115 │                                                                                        │   tools = <briefcase.integrations.base.ToolCache object at 0x6ec7df8b30> │      │
+│   116 │   @abstractmethod                                                                      ╰──────────────────────────────────────────────────────────────────────────╯      │
+│   117 │   def exists(self) -> bool:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/base.py:78 in verify                                                                         │
+│                                                                                                                                                                                  │
+│    75 │   ) -> ToolT:                                                                          ╭──────────────────────────────── locals ─────────────────────────────────╮       │
+│    76 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                           │       │
+│    77 │   │   cls.verify_host(tools=tools)                                                     │ kwargs = {'install': True}                                              │       │
+│ ❱  78 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │  tools = <briefcase.integrations.base.ToolCache object at 0x6ec7df8b30> │       │
+│    79 │   │   return tool                                                                      ╰─────────────────────────────────────────────────────────────────────────╯       │
+│    80 │                                                                                                                                                                          │
+│    81 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/android_sdk.py:370 in verify_install                                                         │
+│                                                                                                                                                                                  │
+│    367 │   │   │   │   │   │   "directory path in the ANDROID_HOME environment variable."                                                                                        │
+│    368 │   │   │   │   │   )                                                                                                                                                     │
+│    369 │   │   │   │   │   tools.console.info()                                                                                                                                  │
+│ ❱  370 │   │   │   │   sdk.install()                                                                                                                                             │
+│    371 │   │                                                                                                                                                                     │
+│    372 │   │   # Licences must be accepted to use the SDK                                                                                                                        │
+│    373 │   │   sdk.verify_license()                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ──────────────────────────────────────────────╮                                                                            │
+│ │        install = True                                                                             │                                                                            │
+│ │         kwargs = {'app': None}                                                                    │                                                                            │
+│ │            sdk = <briefcase.integrations.android_sdk.AndroidSDK object at 0x6ec1e18f80>           │                                                                            │
+│ │   sdk_root_env = None                                                                             │                                                                            │
+│ │  sdk_root_path = PosixPath('/data/data/com.termux/files/home/.cache/briefcase/tools/android_sdk') │                                                                            │
+│ │ sdk_source_env = None                                                                             │                                                                            │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x6ec7df8b30>                   │                                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                            │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/android_sdk.py:403 in install                                                                │
+│                                                                                                                                                                                  │
+│    400 │   def install(self):                                                                                                                                                    │
+│    401 │   │   """Download and install the Android SDK."""                                                                                                                       │
+│    402 │   │   cmdline_tools_zip_path = self.tools.file.download(                                                                                                                │
+│ ❱  403 │   │   │   url=self.cmdline_tools_url,                                                                                                                                   │
+│    404 │   │   │   download_path=self.tools.base_path,                                                                                                                           │
+│    405 │   │   │   role="Android SDK Command-Line Tools",                                                                                                                        │
+│    406 │   │   )                                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────── locals ────────────────────────────────────╮                                                                                                │
+│ │ self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x6ec1e18f80> │                                                                                                │
+│ ╰───────────────────────────────────────────────────────────────────────────────╯                                                                                                │
+│                                                                                                                                                                                  │
+│ /data/data/com.termux/files/usr/lib/python3.12/site-packages/briefcase/integrations/android_sdk.py:99 in cmdline_tools_url                                                       │
+│                                                                                                                                                                                  │
+│     96 │   │   │   │   },                                                                                                                                                        │
+│     97 │   │   │   }[self.tools.host_os][self.tools.host_arch]                                                                                                                   │
+│     98 │   │   except KeyError as e:                                                                                                                                             │
+│ ❱   99 │   │   │   raise IncompatibleToolError(                                                                                                                                  │
+│    100 │   │   │   │   tool=self.full_name, env_var="ANDROID_HOME"                                                                                                               │
+│    101 │   │   │   ) from e                                                                                                                                                      │
+│    102                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────── locals ────────────────────────────────────╮                                                                                                │
+│ │ self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x6ec1e18f80> │                                                                                                │
+│ ╰───────────────────────────────────────────────────────────────────────────────╯                                                                                                │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+IncompatibleToolError: Briefcase cannot install Android SDK on this machine.
+
+Install Android SDK manually and specify the installation directory in the ANDROID_HOME environment variable.
+            
