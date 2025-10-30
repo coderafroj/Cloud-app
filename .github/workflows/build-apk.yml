@@ -1,0 +1,36 @@
+name: Build CloudApp APK
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install briefcase
+
+      - name: Build Android APK
+        run: |
+          briefcase create android
+          briefcase build android
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: CloudApp-APK
+          path: "*/android/*.apk"
