@@ -3,6 +3,10 @@ name: Build CloudApp APK
 on:
   workflow_dispatch:
 
+concurrency:
+  group: build-cloudapp
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +16,7 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -20,18 +24,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Upgrade pip and install Briefcase
         run: |
           python -m pip install --upgrade pip
           pip install briefcase
 
-      - name: Build APK
+      - name: Build Android APK with Briefcase
         run: |
           briefcase create android
           briefcase build android
           briefcase package android
 
-      - name: Upload APK
+      - name: Upload generated APK
         uses: actions/upload-artifact@v4
         with:
           name: CloudApp-APK
