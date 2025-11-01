@@ -16,7 +16,7 @@ formal_name = "CloudApp"
 description = "GitHub file uploader built by Afroj"
 sources = ["cloudapp"]
 requires = [
-    "toga",
+    "toga-android",
     "PyGithub"
 ]
 
