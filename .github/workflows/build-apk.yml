@@ -41,5 +41,4 @@ jobs:
           name: CloudApp-APK
           path: |
             **/*.apk
-          compression-level: 9
           if-no-files-found: error
