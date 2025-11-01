@@ -15,7 +15,7 @@ author_email = "coderafroj@example.com"
 formal_name = "CloudApp"
 description = "A Python-based Android app built by Afroj."
 sources = ["cloudapp"]
-requires = ["python"]
+requires = []  # ← ye khali rakho, ya agar dependencies hain to unka naam likho
 
 [tool.briefcase.app.cloudapp.android]
-requires = []
+requires = []  # yahan bhi dependencies add kar sakte ho agar Android-specific kuch ho
