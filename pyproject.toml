@@ -5,17 +5,17 @@ build-backend = "briefcase.build"
 [tool.briefcase]
 project_name = "CloudApp"
 bundle = "com.bytecore.cloudapp"
-version = "0.1.0"
-url = "https://bytecore.in"
-license.file = "LICENSE"
+version = "1.0.0"
+url = "https://coderafroj.github.io"
 author = "Afroj"
 author_email = "coderafroj@example.com"
+license.file = "LICENSE"
 
 [tool.briefcase.app.cloudapp]
 formal_name = "CloudApp"
-description = "A Python-based Android app built by Afroj."
-sources = ["cloudapp"]
-requires = []  # ← ye khali rakho, ya agar dependencies hain to unka naam likho
+description = "GitHub file uploader built by Afroj"
+sources = ["."]
+requires = ["toga", "PyGithub"]
 
 [tool.briefcase.app.cloudapp.android]
-requires = []  # yahan bhi dependencies add kar sakte ho agar Android-specific kuch ho
+requires = ["toga-android"]
