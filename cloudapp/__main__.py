@@ -1,54 +1,94 @@
 import toga
 from toga.style import Pack
-from toga.style.pack import COLUMN, ROW
+from toga.style.pack import COLUMN, ROW, CENTER
 from github import Github
+
 
 class CloudApp(toga.App):
     def startup(self):
-        # --------- Main window ---------
+        # -------- Main Window --------
         self.main_window = toga.MainWindow(title=self.formal_name)
 
-        # GitHub token input
-        self.token_input = toga.TextInput(placeholder="GitHub Token (ghp_xxx...)", style=Pack(flex=1))
-        self.connect_button = toga.Button("Connect", on_press=self.connect_github, style=Pack(padding_left=10))
-        top_row = toga.Box(children=[self.token_input, self.connect_button], style=Pack(direction=ROW, padding=10))
+        # -------- Top (GitHub login) --------
+        self.token_input = toga.TextInput(
+            placeholder="🔑 GitHub Token (ghp_xxx...)",
+            style=Pack(flex=1, padding_right=5)
+        )
+        self.connect_button = toga.Button(
+            "Connect",
+            on_press=self.connect_github,
+            style=Pack(width=100)
+        )
+        top_row = toga.Box(
+            children=[self.token_input, self.connect_button],
+            style=Pack(direction=ROW, padding=(5, 10))
+        )
 
-        # Repo list
-        self.repo_list = toga.Selection(items=[], style=Pack(flex=1))
-        self.refresh_button = toga.Button("Refresh Repos", on_press=self.refresh_repos, style=Pack(padding_top=5))
+        # -------- Repo selection --------
+        repo_label = toga.Label("📦 Select Repository:", style=Pack(padding_top=10))
+        self.repo_list = toga.Selection(items=[], style=Pack(flex=1, padding_top=5))
+        self.refresh_button = toga.Button(
+            "🔄 Refresh Repos",
+            on_press=self.refresh_repos,
+            style=Pack(padding_top=5, alignment=CENTER)
+        )
 
-        # File chooser
-        self.file_label = toga.Label("No file selected", style=Pack(padding=5))
-        self.choose_button = toga.Button("Choose File", on_press=self.choose_file, style=Pack(padding=5))
+        # -------- File chooser --------
+        file_box = toga.Box(style=Pack(direction=ROW, padding_top=10))
+        self.file_label = toga.Label(
+            "📁 No file selected",
+            style=Pack(flex=1, padding=(5, 0))
+        )
+        self.choose_button = toga.Button(
+            "Choose File",
+            on_press=self.choose_file,
+            style=Pack(width=120)
+        )
+        file_box.add(self.file_label)
+        file_box.add(self.choose_button)
 
-        # Upload inputs
-        self.path_input = toga.TextInput(placeholder="uploads/", style=Pack(flex=1))
-        self.message_input = toga.TextInput(placeholder="Upload message", style=Pack(flex=1, padding_top=5))
-        self.upload_button = toga.Button("Upload", on_press=self.upload_file, style=Pack(padding=10, flex=1))
+        # -------- Upload details --------
+        self.path_input = toga.TextInput(
+            placeholder="uploads/filename.txt",
+            style=Pack(flex=1, padding_top=10)
+        )
+        self.message_input = toga.TextInput(
+            placeholder="💬 Commit message",
+            style=Pack(flex=1, padding_top=5)
+        )
 
-        # Log area
-        self.log = toga.MultilineTextInput(readonly=True, style=Pack(flex=1, height=150))
+        self.upload_button = toga.Button(
+            "⬆️ Upload File",
+            on_press=self.upload_file,
+            style=Pack(padding=10, alignment=CENTER)
+        )
 
-        # Layout
+        # -------- Log area --------
+        self.log = toga.MultilineTextInput(
+            readonly=True,
+            style=Pack(flex=1, height=200, padding_top=10)
+        )
+
+        # -------- Main layout --------
         main_box = toga.Box(
             children=[
                 top_row,
+                repo_label,
                 self.repo_list,
                 self.refresh_button,
-                self.file_label,
-                self.choose_button,
+                file_box,
                 self.path_input,
                 self.message_input,
                 self.upload_button,
-                self.log
+                self.log,
             ],
-            style=Pack(direction=COLUMN, padding=10)
+            style=Pack(direction=COLUMN, padding=15)
         )
 
-        self.main_window.content = main_box
+        self.main_window.content = toga.ScrollContainer(content=main_box)
         self.main_window.show()
 
-        # internal state
+        # Internal state
         self.gh = None
         self.user = None
         self.selected_repo = None
@@ -75,8 +115,11 @@ class CloudApp(toga.App):
         if not self.user:
             self.log_msg("⚠️ Connect first.")
             return
-        self.repo_list.items = [repo.full_name for repo in self.user.get_repos()]
-        self.log_msg("🔄 Repositories loaded.")
+        try:
+            self.repo_list.items = [repo.full_name for repo in self.user.get_repos()]
+            self.log_msg("🔄 Repositories loaded successfully.")
+        except Exception as e:
+            self.log_msg(f"❌ Repo load error: {e}")
 
     def choose_file(self, widget):
         try:
@@ -90,11 +133,12 @@ class CloudApp(toga.App):
 
     def upload_file(self, widget):
         if not self.selected_file or not self.repo_list.value:
-            self.log_msg("⚠️ Select repo and file first.")
+            self.log_msg("⚠️ Select repository and file first.")
             return
+
         repo_name = self.repo_list.value
         repo = self.user.get_repo(repo_name)
-        path_in_repo = self.path_input.value or "uploads/"
+        path_in_repo = self.path_input.value or "uploads/" + self.selected_file.split("/")[-1]
         commit_msg = self.message_input.value or "Uploaded via CloudApp"
 
         try:
@@ -105,12 +149,13 @@ class CloudApp(toga.App):
             try:
                 existing = repo.get_contents(path_in_repo)
                 repo.update_file(path_in_repo, commit_msg, content, existing.sha)
-                self.log_msg("✅ File updated successfully.")
+                self.log_msg(f"✅ Updated: {path_in_repo}")
             except Exception:
                 repo.create_file(path_in_repo, commit_msg, content)
-                self.log_msg("✅ File uploaded successfully.")
+                self.log_msg(f"✅ Uploaded: {path_in_repo}")
         except Exception as e:
             self.log_msg(f"❌ Upload error: {e}")
+
 
 def main():
     return CloudApp("CloudApp", "com.bytecore.cloudapp")
