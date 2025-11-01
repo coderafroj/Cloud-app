@@ -14,8 +14,11 @@ license.file = "LICENSE"
 [tool.briefcase.app.cloudapp]
 formal_name = "CloudApp"
 description = "GitHub file uploader built by Afroj"
-sources = ["."]
-requires = ["toga", "PyGithub"]
+sources = ["cloudapp"]
+requires = [
+    "toga",
+    "PyGithub"
+]
 
 [tool.briefcase.app.cloudapp.android]
 requires = ["toga-android"]
