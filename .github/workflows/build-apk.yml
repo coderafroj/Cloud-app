@@ -39,4 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: CloudApp-APK
-          path: "**/*.apk"
+          path: |
+            **/*.apk
+          compression-level: 9
+          if-no-files-found: error
